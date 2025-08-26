@@ -1,0 +1,50 @@
+<!-- LOGIN -->
+<section class="d-flex align-items-center justify-content-center vh-100 bg-light">
+  <div class="card shadow-lg border-0 p-4" style="max-width: 400px; width: 100%;">
+    <div class="text-center mb-4">
+      <!-- Logo de la institución -->
+      <img src="assets/img/logo.png" alt="Logo Institución" width="80" class="mb-3">
+      <h3 class="fw-bold text-primary">Ingreso a la Plataforma</h3>
+      <p class="text-muted small">Bienvenido, por favor ingresa tus credenciales</p>
+    </div>
+
+    <!-- Formulario -->
+    <form>
+      <!-- Usuario -->
+      <div class="mb-3">
+        <label for="usuario" class="form-label fw-semibold">Usuario</label>
+        <input type="text" id="usuario" class="form-control rounded-pill" placeholder="Ingresa tu usuario">
+      </div>
+
+      <!-- Contraseña -->
+      <div class="mb-3">
+        <label for="password" class="form-label fw-semibold">Contraseña</label>
+        <input type="password" id="password" class="form-control rounded-pill" placeholder="Ingresa tu contraseña">
+      </div>
+
+      <!-- Recordar -->
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="remember">
+          <label class="form-check-label small" for="remember">Recordarme</label>
+        </div>
+        <a href="#" class="small text-decoration-none text-primary">¿Olvidaste tu contraseña?</a>
+      </div>
+
+      <!-- Botón -->
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary rounded-pill fw-bold shadow-sm">
+          🔐 Ingresar
+        </button>
+      </div>
+    </form>
+
+    <!-- Registro -->
+    <div class="text-center mt-4">
+      <p class="small text-muted">
+        ¿No tienes cuenta? 
+        <a href="#" class="text-primary text-decoration-none fw-semibold">Regístrate aquí</a>
+      </p>
+    </div>
+  </div>
+</section>
