@@ -1,16 +1,27 @@
-<header class="header">
+<header class="header" *ngIf="!esIngreso()">
   <nav class="navbar">
     <div class="logo">Nombre del Colegio</div>
     <ul class="nav-links">
-      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</a></li>
-      <li><a routerLink="/simbolos" routerLinkActive="active">Símbolos</a></li>
-      <li><a routerLink="/documentos" routerLinkActive="active">Documentos</a></li>
-      <li><a routerLink="/ingreso" routerLinkActive="active">Ingreso</a></li>
-       <li><a routerLink="/contacto" routerLinkActive="active">Contacto</a></li>
+      <li>
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</a>
+      </li>
+      <li>
+        <a routerLink="/contacto" routerLinkActive="active">Contacto</a>
+      </li>
+      <li>
+        <a routerLink="/simbolos" routerLinkActive="active">Símbolos</a>
+      </li>
+      <li>
+        <a routerLink="/documentos" routerLinkActive="active">Documentos</a>
+      </li>
+      <!-- ✅ Ingreso abre en nueva ventana pantalla completa -->
+      <li>
+        <a href="#" (click)="abrirIngreso($event)">Ingreso</a>
+      </li>
     </ul>
   </nav>
-  
 </header>
+
 <main class="container">
   <router-outlet></router-outlet>
 </main>
