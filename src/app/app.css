@@ -1,15 +1,185 @@
-* { box-sizing: border-box; }
-body { margin: 0; font-family: Arial, sans-serif; }
-
-.header { background: #0a2c5a; color: #fff; }
-.navbar {
-  max-width: 1200px; margin: 0 auto;
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 1rem 1.25rem;
+* {
+  box-sizing: border-box;
 }
-.logo { font-weight: 700; font-size: 1.25rem; letter-spacing: .5px; }
-.nav-links { display: flex; gap: 1.25rem; list-style: none; margin: 0; padding: 0; }
-.nav-links a { color: #fff; text-decoration: none; font-weight: 500; }
-.nav-links a:hover, .nav-links a.active { color: #ffd24d; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 
-.container { max-width: 1200px; margin: 1.5rem auto; padding: 0 1.25rem; }
+/* Header principal */
+.header {
+  background: #fff; /* limpio */
+  border-bottom: 2px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Navbar principal */
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+}
+
+.logo-img {
+  height: 80px; /* 🔥 logo más grande */
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Links principales con color institucional */
+.nav-links a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #8B5E3C; /* marrón dorado */
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #0a2c5a; /* azul profundo */
+}
+
+/* Botón de ingreso */
+.btn-ingreso {
+  background: #0a2c5a; /* azul */
+  color: #fff !important;
+  padding: 0.45rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-ingreso:hover {
+  background: #8B5E3C; /* marrón dorado */
+  color: #fff !important;
+}
+
+/* Barra secundaria institucional */
+.sub-bar {
+  background: #0a2c5a; /* azul profundo */
+  padding: 0.4rem 1.5rem;
+}
+
+.sub-bar ul {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around; /* 🔥 dispersar elementos */
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+
+.sub-bar a {
+  color: #ffd24d; /* dorado */
+  font-size: 0.95rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.sub-bar a:hover {
+  color: #E5D1B8; /* crema */
+}
+
+/* Contenedor general */
+.container {
+  max-width: 1200px;
+  margin: 0 auto; /* ANTES: 1.5rem auto */
+  padding: 0 1.25rem;
+}
+
+/* Elimina margen y padding por defecto */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Asegura que el header no tenga margen abajo */
+header {
+  margin: 0;
+  padding: 0;
+}
+
+/* El carrusel inicia pegado */
+.carousel {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: transparent !important;
+}
+/* Elimina márgenes y padding en todo el header y el body */
+body, header {
+  margin: 0;
+  padding: 0;
+}
+
+/* Si tu navbar o barra de navegación tiene clases específicas */
+nav {
+  margin-bottom: 0 !important;
+  padding-bottom: 0;
+}
+/* 🔹 Elimina cualquier espacio entre el header y el carrusel */
+body.home .header {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* 🔹 Elimina espacio del contenedor principal en la página de inicio */
+body.home main.container {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* 🔹 Forzamos que el carrusel inicie completamente pegado */
+body.home .carousel {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* 🔹 Si la imagen del carrusel genera un pequeño borde blanco */
+body.home .carousel img {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+body.home .header {
+  border-bottom: none !important;
+}
+app-inicio {
+  display: block;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+header.header {
+  margin: 0;
+  padding: 0;
+  border-bottom: none; /* Quita el borde gris si no lo necesitas */
+}
+
+nav {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}

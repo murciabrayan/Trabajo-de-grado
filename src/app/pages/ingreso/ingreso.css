@@ -1,30 +1,148 @@
-/* Contenedor general */
-.login-container {
-  position: relative;
-  height: 100vh;
-  width: 100%;
+/* Cubre toda la ventana y evita scroll. No usa .container de Bootstrap */
+.login-shell {
+  position: fixed;
+  inset: 0;               /* top/right/bottom/left: 0 */
   display: flex;
-  justify-content: flex-end; /* Caja al lado derecho */
+  overflow: hidden;
+  background: #FDFBF7;   /* fondo crema claro */
+}
+
+/* Dos mitades exactas del viewport */
+.login-left,
+.login-right {
+  width: 50vw;
+  height: 100vh;
+}
+
+/* Centrar la tarjeta de login */
+.login-left {
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+/* wrapper interno para agrupar header + card */
+.login-left-inner {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-}
-
-/* Imagen de fondo */
-.background-image {
-  background: url("/assets/img/simijaca.png") no-repeat center center;
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
+  gap: 20px;
   width: 100%;
-  z-index: -1; /* Detrás del login */
+  max-width: 420px;
 }
 
-/* Caja del login */
-.login-box {
-  width: 350px;
-  margin-right: 5%;
-  padding: 25px;
-  background: white;
-  border-radius: 15px;
+/* HEADER: logo + nombre */
+.login-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+  transform: translateY(-8px);
+}
+
+.login-logo {
+  width: 110px;
+  height: auto;
+  display: block;
+}
+
+/* Nombre e insignia */
+.login-institution strong {
+  display: block;
+  font-size: 15px;
+  color: #6B4C1E; /* marrón */
+  margin-top: 6px;
+  letter-spacing: 0.2px;
+}
+
+.login-tagline {
+  font-size: 13px;
+  color: #C9A437; /* dorado */
+  opacity: 0.95;
+  margin-top: 2px;
+}
+
+/* Tarjeta */
+.login-card {
+  width: min(360px, 90%);
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  border: 2px solid #C9A437; /* borde dorado */
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+  text-align: center;
+}
+
+.login-card h1 {
+  margin: 0 0 16px;
+  font-size: 22px;
+  color: #6B4C1E; /* marrón */
+}
+
+/* Inputs */
+.login-card input {
+  width: 100%;
+  height: 40px;
+  margin: 8px 0 12px;
+  padding: 0 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  background: #FDFBF7; /* crema */
+  transition: box-shadow .12s, border-color .12s;
+}
+
+.login-card input:focus {
+  border-color: #C9A437;
+  box-shadow: 0 0 0 3px rgba(201,164,55,.25);
+}
+
+/* Botón */
+.login-card button {
+  width: 100%;
+  height: 42px;
+  border: 0;
+  border-radius: 8px;
+  background: #C9A437; /* dorado */
+  color: #000; /* negro */
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .03s ease, background-color .12s;
+}
+
+.login-card button:active { transform: scale(.99); }
+.login-card button:hover { background: #6B4C1E; color: #fff; }
+
+.login-card .forgot {
+  display: block;
+  margin-top: 12px;
+  font-size: .875rem;
+  color: #C9A437;
+  text-decoration: none;
+}
+
+.login-card .forgot:hover {
+  color: #6B4C1E;
+}
+
+/* Mitad derecha con imagen de fondo */
+.login-right {
+  background-image: url("/assets/img/simijaca.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .login-right { display: none; }
+  .login-left  { width: 100vw; }
+  .login-shell { position: relative; }
+  .login-left-inner { margin-top: 20px; margin-bottom: 20px; }
+}
+
+@media (max-width: 480px) {
+  .login-logo { width: 90px; }
+  .login-card { padding: 18px; }
 }

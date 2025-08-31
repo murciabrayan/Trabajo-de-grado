@@ -1,12 +1,14 @@
 <header class="header" *ngIf="!esIngreso()">
   <nav class="navbar">
-    <div class="logo">Nombre del Colegio</div>
+    <!-- Logo solo -->
+    <div class="logo">
+      <img src="assets/img/logo.png" alt="Logo Colegio" class="logo-img" />
+    </div>
+
+    <!-- Navegación principal -->
     <ul class="nav-links">
       <li>
         <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</a>
-      </li>
-      <li>
-        <a routerLink="/contacto" routerLinkActive="active">Contacto</a>
       </li>
       <li>
         <a routerLink="/simbolos" routerLinkActive="active">Símbolos</a>
@@ -14,12 +16,24 @@
       <li>
         <a routerLink="/documentos" routerLinkActive="active">Documentos</a>
       </li>
-      <!-- ✅ Ingreso abre en nueva ventana pantalla completa -->
       <li>
-        <a href="#" (click)="abrirIngreso($event)">Ingreso</a>
+        <a routerLink="/contacto" routerLinkActive="active">Contacto</a>
+      </li>
+      <li>
+        <a href="#" (click)="abrirIngreso($event)" class="btn-ingreso">Plataforma institucional</a>
       </li>
     </ul>
   </nav>
+
+  <!-- Barra secundaria institucional -->
+  <div class="sub-bar">
+    <ul>
+      <li><a href="#">Noticias</a></li>
+      <li><a href="#">Normatividad</a></li>
+      <li><a href="#">Calendario</a></li>
+      <li><a href="#">Redes Sociales</a></li>
+    </ul>
+  </div>
 </header>
 
 <main class="container">

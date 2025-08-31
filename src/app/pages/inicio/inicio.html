@@ -1,130 +1,97 @@
-<!-- HERO PRINCIPAL -->
-<section class="text-center bg-primary text-white py-5">
-  <div class="container">
-    <h1 class="display-4 fw-bold">
-      ¡Bienvenidos al Colegio!
-    </h1>
-    <p class="lead mt-3">
-      Un lugar donde aprendemos, crecemos y soñamos en grande.
-    </p>
-    <a href="#" class="btn btn-light btn-lg mt-3">
-      Descubre más
-    </a>
+<div class="carousel">
+  <div class="slide active">
+    <img src="assets/img/1.jpg" alt="Imagen 1">
   </div>
+  <div class="slide">
+    <img src="assets/img/2.jpg" alt="Imagen 2">
+  </div>
+  <div class="slide">
+    <img src="assets/img/simijaca2.png" alt="Imagen 3">
+  </div>
+  
+  <!-- 🔥 Eventos de Angular -->
+  <button class="prev" (click)="prevSlide()">&#10094;</button>
+  <button class="next" (click)="nextSlide()">&#10095;</button>
+</div>
+<div class="separator"></div>
+
+
+<section class="consejos-section">
+  <div class="separator"></div>
+    <h2>💡 Consejos Estudiantiles</h2>
+    <div class="consejos-container">
+        <div class="consejo-card blue">
+            <h3>📅 Organiza tu tiempo</h3>
+            <p>Planifica tus estudios con un horario y evita la procrastinación.</p>
+        </div>
+        <div class="consejo-card green">
+            <h3>😴 Descansa bien</h3>
+            <p>Un buen descanso mejora la concentración y el rendimiento académico.</p>
+        </div>
+        <div class="consejo-card red">
+            <h3>❓ Pregunta siempre</h3>
+            <p>No tengas miedo de preguntar en clase, resolver dudas fortalece tu aprendizaje.</p>
+        </div>
+        <div class="consejo-card purple">
+            <h3>📘 Estudia con técnica</h3>
+            <p>Aplica métodos de estudio efectivos para aprovechar mejor tu tiempo.</p>
+            
+        </div>
+    
+      </div>
 </section>
 
-<!-- TRES BLOQUES JUVENILES -->
-<section class="py-5">
-  <div class="container">
-    <div class="row text-center">
-      
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 shadow border-0">
-          <div class="card-body">
-            <i class="bi bi-people fs-1 text-success mb-3"></i>
-            <h5 class="card-title text-success fw-bold">Amigos y Comunidad</h5>
-            <p class="card-text">
-              Aquí hacemos amigos para toda la vida y construimos recuerdos inolvidables.
-            </p>
-          </div>
-        </div>
-      </div>
+<div class="separator"></div>
+<div class="separator"></div>
 
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 shadow border-0">
-          <div class="card-body">
-            <i class="bi bi-laptop fs-1 text-info mb-3"></i>
-            <h5 class="card-title text-info fw-bold">Tecnología y Futuro</h5>
-            <p class="card-text">
-              Aprendemos con herramientas modernas que nos preparan para un mundo digital.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 shadow border-0">
-          <div class="card-body">
-            <i class="bi bi-star fs-1 text-warning mb-3"></i>
-            <h5 class="card-title text-warning fw-bold">Talento y Creatividad</h5>
-            <p class="card-text">
-              Cada estudiante brilla con sus talentos en arte, deporte y ciencia.
-            </p>
-          </div>
-        </div>
-      </div>
-
+<!-- Sección Noticias -->
+<section class="section noticias">
+  <h2>Noticias</h2>
+  <div class="news-grid">
+    <div class="news-card">
+      <img src="assets/img/noticia1.jpg" alt="Noticia 1">
+      <h3>Nuevo laboratorio</h3>
+      <p>Se inauguró el nuevo laboratorio de ciencias con equipos de última tecnología.</p>
+    </div>
+    <div class="news-card">
+      <img src="assets/img/noticia2.jpg" alt="Noticia 2">
+      <h3>Feria cultural</h3>
+      <p>Los estudiantes participaron en la feria cultural mostrando proyectos innovadores.</p>
+    </div>
+    <div class="news-card">
+      <img src="assets/img/noticia3.jpg" alt="Noticia 3">
+      <h3>Campeonato deportivo</h3>
+      <p>Gran desempeño de nuestros equipos en el campeonato intercolegial.</p>
+    </div>
+  </div>
+</section>
+<div class="separator"></div>
+<!-- Sección Eventos -->
+<section class="section eventos">
+  <h2>Próximos Eventos</h2>
+  <div class="eventos-lista">
+    <div class="evento">
+      <h3>Semana de la Ciencia</h3>
+      <p>Del 15 al 19 de septiembre.</p>
+    </div>
+    <div class="evento">
+      <h3>Día de la Familia</h3>
+      <p>5 de octubre en las instalaciones del colegio.</p>
+    </div>
+    <div class="evento">
+      <h3>Olimpiadas Matemáticas</h3>
+      <p>20 de octubre, fase clasificatoria.</p>
     </div>
   </div>
 </section>
 
-<!-- SECCIÓN MOTIVACIONAL -->
-<section class="py-5 bg-light">
-  <div class="container text-center">
-    <h2 class="fw-bold mb-4 text-primary">Sueña, Aprende, Crea</h2>
-    <p class="lead">
-      En nuestro colegio creemos que la educación es la llave para abrir puertas a un futuro brillante.
-    </p>
-    <a routerLink="/institucional" class="btn btn-success btn-lg mt-3">
-      Conoce más sobre nosotros
-    </a>
-  </div>
-</section>
-
-<!-- EVENTOS ESCOLARES -->
-<section class="py-5">
-  <div class="container">
-    <h2 class="text-center fw-bold mb-5 text-dark">Próximos Eventos</h2>
-    <div class="row">
-
-      <div class="col-md-4 mb-4">
-        <div class="card shadow-sm h-100 border-0">
-          <img src="assets/img/logo.jpg" class="card-img-top" alt="Festival">
-          <div class="card-body">
-            <h5 class="card-title text-primary">Festival de Talentos</h5>
-            <p class="card-text">Música, danza y creatividad en un evento lleno de alegría.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <div class="card shadow-sm h-100 border-0">
-          <img src="assets/img/evento2.jpg" class="card-img-top" alt="Ciencia">
-          <div class="card-body">
-            <h5 class="card-title text-success">Feria de Ciencia</h5>
-            <p class="card-text">Proyectos que muestran la curiosidad y el ingenio de nuestros estudiantes.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <div class="card shadow-sm h-100 border-0">
-          <img src="assets/img/evento3.jpg" class="card-img-top" alt="Deporte">
-          <div class="card-body">
-            <h5 class="card-title text-warning">Olimpiadas Deportivas</h5>
-            <p class="card-text">Competencias donde la pasión y el espíritu de equipo son protagonistas.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- GALERÍA -->
-<section class="py-5 bg-light">
-  <div class="container">
-    <h2 class="text-center fw-bold mb-5 text-dark">Galería</h2>
-    <div class="row g-3">
-      <div class="col-md-4">
-        <img src="assets/img/galeria1.jpg" class="img-fluid rounded shadow" alt="Imagen 1">
-      </div>
-      <div class="col-md-4">
-        <img src="assets/img/galeria2.jpg" class="img-fluid rounded shadow" alt="Imagen 2">
-      </div>
-      <div class="col-md-4">
-        <img src="assets/img/galeria3.jpg" class="img-fluid rounded shadow" alt="Imagen 3">
-      </div>
-    </div>
+<!-- Sección Redes Sociales -->
+<section class="section redes">
+  <h2>Síguenos en redes</h2>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
   </div>
 </section>
